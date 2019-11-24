@@ -25,11 +25,12 @@ if (!out) {
 
 const html = String(readFileSync(tmpl))
 const requireSafeData = data.match(/^\.{0,2}\//) ? data : `./${data}`
+const dataContent = require(requireSafeData)
 
 const rendered = render(
   html,
   {
-    ...require(requireSafeData),
+    ...(typeof dataContent === 'function' ? dataContent(params) : dataContent),
     ...params
   }
 )
