@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale = 1.0, user-scalable = no, maximum-scale=1.0">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="basscss.css" />
+  <link rel="stylesheet" href="template.css" />
+</head>
+
+<body class="h5 p3">
+  <h1 class="h1 center mb3 capitalize">facture</h1>
+
+  <div class="flex">
+    <div class="half">
+      <div class="semi-bold h3 capitalize">guillaume debailly</div>
+      <p class="capitalize">
+          35 rue de la malverse <br>
+          75000 PARIS
+      </p>
+    </div>
+    <div class="half">
+      <div class="flex mb05">
+          <span class="semi-bold sixtypercent">N° de facture</span>
+          <span class="fortypercent h6 uppercase">${id}</span>
+      </div>
+      <div class="flex mb3">
+          <span class="semi-bold sixtypercent">Date de facturation</span>
+          <span class="fortypercent">${date}</span>
+      </div>
+      <div class="flex mb05">
+          <span class="semi-bold sixtypercent">N° d'identification SIREN</span>
+          <span class="fortypercent">000 000 007</span>
+      </div>
+      <div class="flex">
+          <span class="semi-bold sixtypercent">N° d'enregistrement TVA</span>
+          <span class="fortypercent">FR00123456789</span>
+      </div>
+    </div>
+  </div>
+
+  <p>À:</p>
+
+  <div class="semi-bold h3 capitalize">bureau des légendes</div>
+  <p class="capitalize mb3">
+      36 boulevard des orfèvres<br>
+      75000 PARIS <br>
+      <span class="semi-bold mr1">SIRET:</span> B 700 000 000
+  </p>
+
+  <div class="half mb4">
+    <strong class="mr1 inline-block capitalize-first">objet:</strong>
+    <span class="inline-block capitalize-first">prestation d'espionnage</span>
+  </div>
+
+  <table class="fullwidth border border-box">
+    <caption class="bold mt2 right-align h4">
+      <span class="mr1">Total à payer</span> <span class="compact">${sum} €</span>
+    </caption>
+    <thead>
+      <tr>
+        <th class="border left-align">Description</th>
+        <th class="border right-align">Unités</th>
+        <th class="border right-align">Tarif</th>
+        <th class="border right-align">Total Net</th>
+        <th class="border right-align">TVA (20%)</th>
+        <th class="border right-align">Total TTC</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th class="border left-align semi-bold">Entourloupes & arnaques</th>
+        <td class="border right-align">${qty}</td>
+        <td class="border right-align">${price} €</td>
+        <td class="border right-align">${taxeFreeSum} €</td>
+        <td class="border right-align">${vat} €</td>
+        <td class="border right-align">${sum} €</td>
+      </tr>
+      <tr>
+        <th class="border right-align pt1" colspan="3">Total de la facture</th>
+        <td class="border right-align bold compact pt1">${taxeFreeSum} €</td>
+        <td class="border right-align bold compact pt1">${vat} €</td>
+        <td class="border right-align bold compact pt1">${sum} €</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>par virement sur le compte:</p>
+  <img class="fullwidth" src="rib-unique-boursorama.png">
+</body>
+
+</html>

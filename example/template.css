@@ -1,0 +1,83 @@
+/* CSS DEBUG TOOLS *
+:matches(*, *::before, *::after) {
+  box-shadow: inset 0 0 0 1px gold;
+}
+/* END CSS DEBUG TOOLS */
+
+@font-face {
+  font-family: 'Embedded Avenir';
+  src: url('fonts/avenir-light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Embedded Avenir';
+  src: url('fonts/avenir-heavy.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Embedded Avenir';
+  src: url('fonts/avenir-medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Embedded Avenir';
+}
+
+.fullwidth {
+  width: 100%;
+}
+
+.half {
+  width: 50%;
+}
+
+.sixtypercent {
+  width: 60%;
+}
+
+.fortypercent {
+  width: 40%;
+}
+
+.semi-bold {
+  font-weight: 500;
+}
+
+.mb05 {
+  margin-bottom: 0.4em;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+caption {
+  caption-side: bottom;
+}
+
+th, td, caption {
+  padding: 0.1em 0.3em 0.05em 0.3em;
+}
+
+.compact {
+  letter-spacing: -0.03em;
+}
+
+p::first-letter,
+.capitalize-first::first-letter {
+  text-transform: uppercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
